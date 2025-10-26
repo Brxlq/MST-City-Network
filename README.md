@@ -18,27 +18,25 @@ Each vertex represents a city district, and each weighted edge represents a pote
 
 Both algorithms produced identical MST costs for every dataset, confirming correctness.
 
-2. Comparison Between Prim’s and Kruskal’s Algorithms
+###2. Comparison Between Prim’s and Kruskal’s Algorithms
+
 | CRITERION | KRUSKAL'S ALGORITHM | PRIM'S ALGORITHM |
-|:--------:|:--------:|:--------:|
-|    Approach      |     Sorts all edges by weight and connects disjoint sets using DSU.     | Expands MST from one vertex using a priority queue.         |
-|    Best for      |   Sparse graphs (few edges).       |    Dense graphs (many edges).      |
-|    Time Complexity      |    
-O(E log E)
-      |    O(E log V)      |
-|    Main Data Structure      |     Disjoint Set Union (DSU).     |    Priority Queue (Heap).
-      |
-|    Performance (in tests)      |  Fewer comparisons and simpler structure.        | Slightly more comparisons and PQ operations.         |
-|     Practical Result     |  Efficient for sparse city networks.        |  Better for dense urban networks.        |
+|:---------:|:------------------:|:---------------:|
+| Approach | Sorts all edges by weight and connects disjoint sets using DSU. | Expands MST from one vertex using a priority queue. |
+| Best for | Sparse graphs (few edges). | Dense graphs (many edges). |
+| Time Complexity | O(E log E) | O(E log V) |
+| Main Data Structure | Disjoint Set Union (DSU). | Priority Queue (Heap). |
+| Performance (in tests) | Fewer comparisons and simpler structure. | Slightly more comparisons and PQ operations. |
+| Practical Result | Efficient for sparse city networks. | Better for dense urban networks. |
 
+###3. Discussion
+- In all test cases, Prim’s and Kruskal’s algorithms produced MSTs with the same total cost.  
+- The difference lies in how they reach that result:  
+  - Kruskal performs fewer comparisons since it primarily sorts edges once and connects components using DSU.  
+  - Prim executes more priority queue operations but handles dense graphs more efficiently.  
+- On small datasets, both algorithms performed almost instantly (0–3 ms).  
+- As the number of vertices increased, the number of operations grew, but MST cost remained consistent.
 
-3. Discussion
-⦁	In all test cases, Prim’s and Kruskal’s algorithms produced MSTs with the same total cost.
-⦁	The difference lies in how they reach that result:
-⦁	Kruskal performs fewer comparisons since it primarily sorts edges once and connects components using DSU.
-⦁	Prim executes more priority queue operations but handles dense graphs more efficiently.
-⦁	On small datasets, both algorithms performed almost instantly (0–3 ms).
-⦁	As the number of vertices increased, the number of operations grew, but MST cost remained consistent.
 
 4. Conclusions
 1.	Both algorithms correctly build the MST and guarantee minimal total road cost.
