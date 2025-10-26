@@ -1,10 +1,15 @@
-Analytical Report – Optimization of a City Transportation Network (MST)
-Student: Yerkebulan Sovet
-Group: SE-2430
+# Analytical Report – Optimization of a City Transportation Network (MST)
 
-1. Summary of Input Data and Results
-Three datasets represent small, medium, and large city networks.
-Each vertex represents a city district, and each weighted edge represents a potential road with a construction cost.
+**Student:** Yerkebulan Sovet  
+**Group:** SE-2430  
+
+---
+
+## Summary of Input Data and Results
+
+Three datasets represent small, medium, and large city networks. Each vertex represents a city district, and each weighted edge represents a potential road with a construction cost.
+
+---
 
 | DATASET | VERTICES | EDGES | ALGORITHM | MST COST | TIME (MS) | COMPARISON |
 |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
@@ -18,7 +23,9 @@ Each vertex represents a city district, and each weighted edge represents a pote
 
 Both algorithms produced identical MST costs for every dataset, confirming correctness.
 
-###2. Comparison Between Prim’s and Kruskal’s Algorithms
+---
+
+## Comparison Between Prim’s and Kruskal’s Algorithms
 
 | CRITERION | KRUSKAL'S ALGORITHM | PRIM'S ALGORITHM |
 |:---------:|:------------------:|:---------------:|
@@ -29,7 +36,10 @@ Both algorithms produced identical MST costs for every dataset, confirming corre
 | Performance (in tests) | Fewer comparisons and simpler structure. | Slightly more comparisons and PQ operations. |
 | Practical Result | Efficient for sparse city networks. | Better for dense urban networks. |
 
-###3. Discussion
+---
+
+## Discussion
+
 - In all test cases, Prim’s and Kruskal’s algorithms produced MSTs with the same total cost.  
 - The difference lies in how they reach that result:  
   - Kruskal performs fewer comparisons since it primarily sorts edges once and connects components using DSU.  
@@ -37,20 +47,28 @@ Both algorithms produced identical MST costs for every dataset, confirming corre
 - On small datasets, both algorithms performed almost instantly (0–3 ms).  
 - As the number of vertices increased, the number of operations grew, but MST cost remained consistent.
 
+---
 
-4. Conclusions
-1.	Both algorithms correctly build the MST and guarantee minimal total road cost.
-2.	Kruskal’s algorithm is simpler and faster for sparse networks (fewer connections)
-3.	Prim’s algorithm scales better on dense networks (many edges).
-4.	For real-world city transportation systems, Prim’s algorithm is generally preferred due to graph density and adjacency list efficiency.
+## Conclusions
 
-5. Appendix – MST Visualizations
-Figure 1. MST for Small Graph (5 vertices)
-Figure 2. MST for Medium Graph (12 vertices)
-Figure 3. MST for Large Graph (25 vertices)
+- Both algorithms correctly build the MST and guarantee minimal total road cost.  
+- Kruskal’s algorithm is simpler and faster for sparse networks (fewer connections).  
+- Prim’s algorithm scales better on dense networks (many edges).  
+- For real-world city transportation systems, Prim’s algorithm is generally preferred due to graph density and adjacency list efficiency.
 
-Summary
-1.	Implemented and tested both algorithms
-2.	Identical MST costs achieved
-3.	Comparative performance analyzed
-4.	Output saved to summary.csv and output_results.json
+---
+
+## Appendix – MST Visualizations
+
+- **Figure 1:** MST for Small Graph (5 vertices)  
+- **Figure 2:** MST for Medium Graph (12 vertices)  
+- **Figure 3:** MST for Large Graph (25 vertices)  
+
+---
+
+## Summary
+
+- Implemented and tested both algorithms  
+- Identical MST costs achieved  
+- Comparative performance analyzed  
+- Output saved to `summary.csv` and `output_results.json`  
