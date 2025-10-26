@@ -1,0 +1,7 @@
+dataset,algorithm,vertices,edges,mst_cost,time_ms,comparisons,pqOps,unions
+1,Kruskal,5,4,40,00,0,4,0,4
+1,Prim,5,4,40,00,3,8,10,0
+2,Kruskal,12,15,185,00,0,15,0,9
+2,Prim,12,15,185,00,0,30,30,0
+3,Kruskal,25,38,1055,00,0,38,0,23
+3,Prim,25,38,1055,00,0,76,70,0
