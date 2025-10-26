@@ -5,3 +5,4 @@ dataset,algorithm,vertices,edges,mst_cost,time_ms,comparisons,pqOps,unions
 2,Prim,12,15,185,00,0,30,30,0
 3,Kruskal,25,38,1055,00,0,38,0,23
 3,Prim,25,38,1055,00,0,76,70,0
+
